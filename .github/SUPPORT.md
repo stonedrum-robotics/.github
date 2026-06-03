@@ -1,18 +1,31 @@
 # Support
 
-## Community support
+## GitHub Issues
 
-- Use GitHub Issues for reproducible bugs and feature requests.
-- Use GitHub Discussions for integration questions and design proposals.
-- Check the documentation portal before opening a support request.
+Use GitHub Issues for reproducible bugs and feature requests. Include enough detail for another engineer to reproduce the behavior:
 
-## Commercial support
+- Repository and commit SHA or package version.
+- Operating system, Python version, and ROS 2 distribution.
+- Hand model, robot arm, or simulator involved.
+- Minimal command, launch file, or script.
+- Logs, screenshots, or terminal output when helpful.
 
-For demos, training, integration services, or procurement questions, contact `info@stonedrum.co`.
+## GitHub Discussions
 
-## What to include
+Use GitHub Discussions for usage questions, integration help, API design proposals, and planning conversations that are not yet reproducible bugs. Discussions are a good place to ask about ROS 2 setup, mock-mode examples, MoveIt 2 integration, and arm-specific mounting approaches.
 
-- Hand model and firmware version.
-- SDK version or commit.
-- Operating system and ROS 2 distribution.
-- Minimal script, launch file, or logs that reproduce the issue.
+## Commercial Support
+
+For commercial support, training, demos, procurement, or integration projects, contact `info@stonedrum.co`.
+
+Commercial inquiries can include:
+
+- Linkerbot L20 Lite, L20, or L30 evaluation.
+- ROS 2 integration support.
+- Universal Robots, Franka, or KUKA mounting guidance.
+- Training workshops for academic or industrial teams.
+- Custom grasp-library, simulation, or calibration work.
+
+## Response Time
+
+This is a small team - we aim to respond within 5 business days. Safety-critical or security-sensitive reports should be sent privately through the security process in `SECURITY.md`.

@@ -1,32 +1,73 @@
 # Contributing
 
-Thanks for helping improve the dexterous hands platform.
+Thanks for helping improve Stonedrum Robotics open-source dexterous-hand tooling. These repositories support researchers and engineers integrating dexterous robotic hands with Python, ROS 2, simulation, and lab hardware.
 
-## Ways to contribute
+## Issue Reporting
 
-- Report bugs with hardware setup, drivers, or examples.
-- Suggest new grasp primitives or demo scenarios.
-- Improve documentation and tutorials.
-- Add support for additional hand models through the hardware abstraction layer.
+Use GitHub Issues for reproducible bugs, missing documentation, integration problems, and feature requests.
 
-## Development workflow
+For bugs, include:
 
-1. Open an issue describing the change.
-2. Fork the repository and create a focused branch.
-3. Run linting, type checks, and tests locally.
-4. Open a pull request with a concise description and test notes.
+- Repository name and SDK version or commit SHA.
+- Operating system, Python version, and ROS 2 distribution.
+- Hand model or mock mode.
+- Minimal code, launch command, or log output that reproduces the issue.
+- Expected behavior and actual behavior.
+- Any safety-relevant context, such as unexpected motion or limit handling.
 
-## Coding standards
+For feature requests, include:
 
-- Python code uses type hints and docstrings for public classes and functions.
-- Hardware-facing logic must fail safely and document assumptions.
-- Examples should run without physical hardware whenever a simulation or mock mode is available.
-- Public APIs should remain vendor-neutral unless a vendor-specific adapter is unavoidable.
+- The use case and target user.
+- The hand model, robot arm, simulator, or ROS 2 package involved.
+- A proposed API or workflow if you already have one.
+- Whether you are willing to test or contribute the change.
 
-## Local checks
+## Pull Request Process
+
+1. Fork the relevant repository.
+2. Create a focused branch from `main`.
+3. Make the smallest coherent change that solves the issue.
+4. Add or update tests for new behavior.
+5. Run local checks before opening a pull request.
+6. Open a pull request against `main` with a clear summary and test notes.
+
+Accepted branch prefixes:
+
+- `fix/` for bug fixes.
+- `feat/` for new features.
+- `docs/` for documentation updates.
+- `chore/` for maintenance, dependency, or workflow changes.
+
+## Code Standards
+
+- Python code must pass `ruff check .`.
+- Python code must pass `mypy dexterous_hand` with strict type checking.
+- Public functions, classes, and methods must have docstrings and type hints.
+- Public APIs should remain vendor-neutral unless the change is explicitly a vendor adapter.
+- Hardware-facing code must fail safely, document assumptions, and avoid silent limit bypasses.
+- Examples should run in mock mode whenever possible so they are useful without hardware.
+
+## Test Requirements
+
+New code must include tests. For SDK changes, prefer small unit tests under `tests/` that run without physical hardware. For ROS 2 or hardware integration changes, include a mock-mode test, a manual verification checklist, or both.
+
+Run:
 
 ```bash
 ruff check .
 mypy dexterous_hand
 pytest
 ```
+
+## Commit Message Format
+
+Use Conventional Commits:
+
+```text
+feat: add tripod grasp preset
+fix: validate unknown joint names in mock driver
+docs: expand UR integration checklist
+chore: update CI Python matrix
+```
+
+Use `feat`, `fix`, `docs`, `test`, `refactor`, `build`, `ci`, or `chore` as the type. Keep the subject concise and explain hardware or safety implications in the body when relevant.
