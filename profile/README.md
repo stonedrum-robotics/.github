@@ -6,7 +6,7 @@ Open-source Python & ROS 2 SDK for dexterous robotic hands — built for EU rese
 [![ROS 2 Support](https://img.shields.io/badge/ros2-humble%20%7C%20iron%20%7C%20jazzy-orange)](https://docs.ros.org/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
 
-We help research labs, engineering schools, and industrial R&D teams evaluate, integrate, and operate advanced dexterous robotic hands with minimal friction. We collaborate closely with our hardware partner **Linkerbot** to provide stable, production-grade integration solutions.
+We help research labs, engineering schools, and industrial R&D teams evaluate, integrate, and operate advanced dexterous robotic hands with minimal friction. Our platform rests on four strategic pillars: hardware distribution, a vendor-neutral SDK, a training data service (in development), and training/community support.
 
 ---
 
