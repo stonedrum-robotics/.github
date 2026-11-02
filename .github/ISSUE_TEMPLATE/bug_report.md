@@ -6,6 +6,8 @@ labels: bug
 assignees: ""
 ---
 
+<!-- Issues are public. Do not include credentials, tokens, customer or supplier information, private logs, serial numbers or recordings. Report vulnerabilities or unsafe-motion behavior privately: see SECURITY.md. -->
+
 ## Summary
 
 ## Steps to reproduce
@@ -16,9 +18,11 @@ assignees: ""
 
 ## Environment
 
-- Hand model:
-- SDK version:
+- Repository and commit SHA or version:
+- Set-up (mock mode, simulator, or other hardware/software):
+- Hand model, if any:
 - OS:
-- ROS 2 distribution:
+- Python version:
+- ROS 2 distribution, if relevant:
 
-## Logs or screenshots
+## Output (trimmed and redacted)
